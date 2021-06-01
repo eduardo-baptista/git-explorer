@@ -46,7 +46,8 @@ defmodule GitExplorer.MixProject do
       {:tesla, "~> 1.4.0"},
       {:hackney, "~> 1.17.0"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:bypass, "~> 2.1", only: :test}
+      {:bypass, "~> 2.1", only: :test},
+      {:mox, "~> 1.0", only: :test}
     ]
   end
 
