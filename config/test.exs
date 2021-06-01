@@ -18,5 +18,7 @@ config :git_explorer, GitExplorerWeb.Endpoint,
   http: [port: 4002],
   server: false
 
+config :git_explorer, GitExplorer.Repositories.Get, git_hub_adapter: GitExplorer.GitHub.ClientMock
+
 # Print only warnings and errors during test
 config :logger, level: :warn

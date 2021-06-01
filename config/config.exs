@@ -18,6 +18,8 @@ config :git_explorer, GitExplorerWeb.Endpoint,
   pubsub_server: GitExplorer.PubSub,
   live_view: [signing_salt: "3knEyJz/"]
 
+config :git_explorer, GitExplorer.Repositories.Get, git_hub_adapter: GitExplorer.GitHub.Client
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

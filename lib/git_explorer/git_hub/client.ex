@@ -9,6 +9,7 @@ defmodule GitExplorer.GitHub.Client do
 
   @behaviour GitExplorer.GitHub.Behaviour
 
+  @impl true
   def get_user_repos(base_url \\ @base_url, user) do
     "#{base_url}users/#{user}/repos"
     |> get()
