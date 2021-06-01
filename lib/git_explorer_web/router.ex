@@ -7,6 +7,8 @@ defmodule GitExplorerWeb.Router do
 
   scope "/api", GitExplorerWeb do
     pipe_through :api
+
+    get "/users/:user/repos", RepositoriesController, :index
   end
 
   # Enables LiveDashboard only for development
