@@ -7,6 +7,7 @@ defmodule GitExplorerWeb.Router do
 
   pipeline :auth do
     plug GitExplorerWeb.Auth.Pipeline
+    plug GitExplorerWeb.Plugs.RefreshToken
   end
 
   scope "/api", GitExplorerWeb do
