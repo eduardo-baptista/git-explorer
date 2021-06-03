@@ -47,7 +47,9 @@ defmodule GitExplorer.MixProject do
       {:hackney, "~> 1.17.0"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:bypass, "~> 2.1", only: :test},
-      {:mox, "~> 1.0", only: :test}
+      {:mox, "~> 1.0", only: :test},
+      {:pbkdf2_elixir, "~> 1.3"},
+      {:guardian, "~> 2.0"}
     ]
   end
 

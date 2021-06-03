@@ -20,6 +20,14 @@ config :git_explorer, GitExplorerWeb.Endpoint,
 
 config :git_explorer, GitExplorer.Repositories.Get, git_hub_adapter: GitExplorer.GitHub.Client
 
+config :git_explorer, GitExplorer.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
+config :git_explorer, GitExplorer.Auth.Guardian,
+  issuer: "git_explorer",
+  secret_key: "9cVnUefPYB0z/SE4uC00G8MnLFRgqwLqNkTfwqkgzFu1LnMP6sBj2EC1wuTeVcU0"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
