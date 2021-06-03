@@ -28,6 +28,10 @@ config :git_explorer, GitExplorer.Auth.Guardian,
   issuer: "git_explorer",
   secret_key: "9cVnUefPYB0z/SE4uC00G8MnLFRgqwLqNkTfwqkgzFu1LnMP6sBj2EC1wuTeVcU0"
 
+config :git_explorer, GitExplorerWeb.Auth.Pipeline,
+  module: GitExplorer.Auth.Guardian,
+  error_handler: GitExplorerWeb.Auth.ErrorHandler
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
